@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>GoHealth EMR ETL Project – Shaayla Hill</title>
+  <style>
+    body {
+      font-family: 'Helvetica Neue', sans-serif;
+      background: #f9f9f9;
+      color: #333;
+      margin: 0;
+      padding: 2rem;
+    }
+    header {
+      text-align: center;
+      padding-bottom: 2rem;
+    }
+    h1 {
+      font-size: 2.5rem;
+      color: #0073e6;
+    }
+    h2 {
+      margin-top: 2rem;
+      color: #444;
+    }
+    .container {
+      max-width: 800px;
+      margin: auto;
+      background: #fff;
+      padding: 2rem;
+      border-radius: 10px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    }
+    .button {
+      display: inline-block;
+      margin-top: 1rem;
+      padding: 0.75rem 1.5rem;
+      background-color: #0073e6;
+      color: white;
+      border: none;
+      border-radius: 8px;
+      text-decoration: none;
+      font-weight: bold;
+    }
+    img {
+      width: 100%;
+      max-width: 600px;
+      margin-top: 1rem;
+      border-radius: 8px;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <header>
+      <h1>GoHealth EMR Data Engineering Project</h1>
+      <p>Built by Shaayla Hill – 2025</p>
+      <a class="button" href="https://github.com/Shaayhill/gohealth-etl-pipeline3" target="_blank">🔗 View the GitHub Repo</a>
+    </header>
+
+    <section>
+      <h2>📦 Project Overview</h2>
+      <p>This project is a complete ETL pipeline that ingests and processes real-world Electronic Medical Records (EMR) data for GoHealth Urgent Care.</p>
+      <ul>
+        <li>📥 Ingests 4 structured datasets (patients, visits, labs, ICD codes)</li>
+        <li>🧼 Validates missing values and duplicates</li>
+        <li>🔄 Transforms and joins the datasets using `pandas`</li>
+        <li>📊 Outputs a final clean dataset for analysis</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>🧠 Tech Stack</h2>
+      <ul>
+        <li><strong>Python 3</strong> + pandas</li>
+        <li>Structured CSV ingestion</li>
+        <li>GitHub for version control</li>
+        <li>GitHub Pages for hosting</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>📌 Schema Diagram</h2>
+      <p>The final dataset is the result of merging the four key tables below:</p>
+      <img src="docs/schema.png" alt="Schema Diagram">
+    </section>
+
+    <section>
+      <h2>📈 Final Output</h2>
+      <p>The cleaned and combined data is saved as <code>outputs/final_dataset.csv</code>, which can be used to analyze patient outcomes, provider performance, and operational metrics.</p>
+    </section>
+  </div>
+</body>
+</html>
