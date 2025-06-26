@@ -1,0 +1,29 @@
+# Design Decisions & Best Practices
+
+## 🧱 Tools Used
+- **Python + Pandas**: Chosen for flexibility and wide data engineering support.
+- **CSV Format**: Common in healthcare extracts and easy to work with using `pandas`.
+- **Directory Structure**: Clean separation of scripts, data, outputs, and docs.
+
+## 🧼 Data Validation
+- Used `pandas.isnull()` and `.duplicated()` to catch:
+  - Missing fields
+  - Duplicate IDs
+  - Basic data health checks
+
+## 🔄 Transformations
+- Joined all tables step-by-step using `merge()` on keys:
+  - `patients ↔ visits` (on patient_id)
+  - `visits ↔ lab_results` (on visit_id)
+  - `visits ↔ icd_reference` (on icd_code)
+
+## 🛡 HIPAA Considerations
+- No real patient identifiers were included.
+- In real-world usage, data would be encrypted, anonymized, and securely stored.
+
+## 📈 Future Enhancements
+- Add logging and exception handling
+- Integrate with a database (e.g., PostgreSQL)
+- Add unit tests and automate with CI tools
+- Implement Slowly Changing Dimensions (SCD) for patient history
+

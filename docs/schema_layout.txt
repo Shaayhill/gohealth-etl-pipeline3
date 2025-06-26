@@ -1,0 +1,31 @@
+=======================
+GoHealth EMR Data Schema
+=======================
+
+1. patients.csv
+----------------
+- patient_id (string)
+- first_name (string)
+- last_name (string)
+- dob (date)
+- gender (string)
+
+2. visits.csv
+--------------
+- visit_id (string)
+- patient_id (string)
+- visit_date (date)
+- provider_id (string)
+- icd_code (string)
+
+3. lab_results.csv
+-------------------
+- result_id (string)
+- visit_id (string)
+- test_name (string)
+- result_value (string or float)
+
+4. icd_reference.csv
+---------------------
+- icd_code (string)
+- description (string)
